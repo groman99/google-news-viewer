@@ -6,12 +6,6 @@
 
 @section('content')
     <section>
-    @foreach ($items as $item)
-        <article>
-        <!-- <h2>{{ $item->get_title() }}</h2> -->
-        {!! $item->get_description() !!}
-        
-        </article>
-    @endforeach
+        Select a Category
     </section>
 @stop

@@ -12,16 +12,21 @@
 
         <nav id="navigation">
             <a href="/">Home</a>
+            @foreach ($categories as $category)
+                <a href="{{ route('category', $category) }}">{{ ucfirst($category) }}</a>
+            @endforeach
         </nav>
         
         <header id="header">
             @yield('pageTitle')
         </header>
         
-        <div id="application">
+        <div id="content">
             @yield('content')
         </div>
 
+        <br>
+        
         <footer id="footer">
             &copy; Copyright 2016
         </footer>

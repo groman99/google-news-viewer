@@ -12,3 +12,8 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'PageController@home']);
+
+Route::get('/{category}', [
+    'as' => 'category', 
+    'uses' => 'PageController@category'
+])->where('category', implode(array_keys(Config::get('constants.CATEGORIES')), '|'));
