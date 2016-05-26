@@ -4,7 +4,7 @@ return [
     'CATEGORIES' => [
         'slam' => [
             'title' => 'You\'ve Been Slammmmmmeeeeddddd!!!',
-            'query' => 'slams+-dunk+-grand',
+            'query' => 'slams+-dunk+-grand+-into',
         ],
         'shame' => [
             'title' => 'Shame on You',
