@@ -3,3 +3,64 @@
 // Base Files
 // ==========================================================================
 @import "base/normalize";
+
+$gutterWidth: 40px;
+
+h2{
+    font-size: 20px;
+}
+
+.container{
+    padding: $gutterWidth;
+}
+
+.article{
+    margin: 0 0 $gutterWidth;
+
+    table{
+
+        td:first-child{
+            text-align: center;
+            word-break: break-word;            
+            font-size: 8px;
+
+            img{
+                margin-bottom: 4px;
+            }
+        }
+
+        td:last-child{
+            padding-left:40px;
+
+            img{
+                display: none;
+            }
+
+            br:first-child{
+                display: none;
+            }
+
+            .title{
+                display: block;
+                margin-bottom: 5px;
+                @extend h2;
+
+                & + br{
+                    display: none;
+                    
+                    & + b{
+                        font-size: 12px;
+                        display: inline-block;
+                        margin: 5px 0;
+                        color: #999;
+                        font-weight:normal;
+                    }                    
+                }
+            }
+        } 
+
+        &td.no-image{
+            display: none;
+        }       
+    }
+}

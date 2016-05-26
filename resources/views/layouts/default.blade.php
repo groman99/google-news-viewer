@@ -17,16 +17,16 @@
             @endforeach
         </nav>
         
-        <header id="header">
-            @yield('pageTitle')
-        </header>
-        
-        <div id="content">
-            @yield('content')
+        <div class="container">
+            <header id="header">
+                @yield('pageTitle')
+            </header>
+            
+            <div class="content">
+                @yield('content')
+            </div>
         </div>
 
-        <br>
-        
         <footer id="footer">
             &copy; Copyright 2016
         </footer>

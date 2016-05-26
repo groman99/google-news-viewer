@@ -7,7 +7,7 @@
 @section('content')
     <section id="application">
     @foreach ($items as $item)
-        <article>{!! $item->get_description() !!}</article>
+        <article class="article">{!! $item->get_description() !!}</article>
     @endforeach
     </section>
 @stop

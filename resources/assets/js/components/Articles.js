@@ -16,15 +16,20 @@ Articles.prototype.cleanDefaultHTML = function(){
     
     this.$collection.each(function(i, item){
 
-        var $imageWrapper = $(item).find('td').eq(0);
+        var $wrappers = $(item).find('td');
+        var $imageWrapper = $wrappers.eq(0);
+        var $descriptionWrapper = $wrappers.eq(1);
 
         //remove image column if there is no image
         if (!$imageWrapper.children().length) {
-            $imageWrapper.remove();
+            $(item).addClass('no-image');
         }
 
         //remove link to more related news
-        $(item).find('a:last').remove();
+        $descriptionWrapper.find('a:last').remove();
+
+        //identify article title
+        $descriptionWrapper.find('a:first').addClass('title');
 
     });
 };
